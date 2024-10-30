@@ -49,7 +49,7 @@ This project is an employment platform designed to connect Software Developers (
 
 
 ### Database Design
-- **Entity Relationship Diagram (ERD):** [Add ERD Image or Link Here]
+- **Entity Relationship Diagram (ERD):** [![image](https://github.com/user-attachments/assets/ada0ee08-d8ed-456f-acce-6c099faaf38d)]
 
 
 
