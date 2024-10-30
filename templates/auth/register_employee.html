@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% load crispy_forms_tags %} {% block content %}
+<div class="container">
+  <h2>Register as Employee</h2>
+  <form method="post">
+    {% csrf_token %} {{ form|crispy }}
+    <div class="text-center mt-2">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+  </form>
+</div>
+{% endblock %} {% block script %}
+<script>
+  $(document).ready(function () {
+    $("#id_programming_languages").select2({
+      placeholder: "Select programming languages",
+      allowClear: true,
+    });
+  });
+</script>
+{% endblock %}

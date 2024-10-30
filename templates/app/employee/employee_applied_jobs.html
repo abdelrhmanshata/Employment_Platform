@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container mt-5">
+  <h2>Applied Jobs</h2>
+  <table class="table table-striped">
+    <thead class="text-center">
+      <tr>
+        <th>Company Name</th>
+        <th>Job Title</th>
+        <th>City</th>
+        <th>Experience Level</th>
+        <th>Job Type</th>
+        <th>Application Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      {% for application in application_jobs %}
+      <tr>
+        <td>{{ application.job.employer.company_name }}</td>
+        <td>
+          <a href="{% url 'job_detail' application.job.id %}" > 
+          {{ application.job.title }}
+          </a>
+        </td>
+        <td>{{ application.job.city.name }}</td>
+        <td>{{ application.job.experience_level }}</td>
+        <td>{{ application.job.job_types }}</td>
+        <td>Apply for the job {{ application.application_date|timesince }} ago</td>
+        <td>{% if application.status == "Accepted" %}
+          <span class="badge bg-success text-light"
+            >{{application.status}}</span
+          >
+          {% elif application.status == "Rejected" %}
+          <span class="badge bg-danger text-light">{{application.status}}</span>
+          {% else %}
+          <span class="badge bg-secondary text-light"
+            >{{application.status}}</span
+          >
+          {% endif %}</td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="5">No jobs applied for.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'emails/mail_base.html' %} {% block title %}
+<title>Job Application Status</title>
+{% endblock %} {% block style %}
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .header h2 {
+    color: #28a745;
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+
+  .content strong {
+    color: #000;
+  }
+
+  .footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .footer strong {
+    color: #333;
+  }
+
+  /* Responsive Design */
+  @media only screen and (max-width: 600px) {
+    .container {
+      padding: 15px;
+    }
+
+    .header h2 {
+      font-size: 20px;
+    }
+
+    .content p {
+      font-size: 14px;
+    }
+
+    .footer {
+      font-size: 12px;
+    }
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="container">
+  <div class="header">
+    <h2>Congratulations, {{ employee_name }}!</h2>
+  </div>
+
+  <div class="content">
+    <p>
+      We are pleased to inform you that your application for the position of
+      <strong>{{ job_title }}</strong> at
+      <strong>{{ company_name }}</strong> has been <strong>accepted</strong>.
+    </p>
+    <p>
+      We look forward to welcoming you to our team. More details regarding your
+      next steps will be sent to you soon.
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>Thank you for your interest in joining us!</p>
+    <p><strong>{{ company_name }}</strong></p>
+  </div>
+</div>
+{% endblock %}

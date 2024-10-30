@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Our Service</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap");
+
+      body {
+        font-family: "Noto Kufi Arabic", sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin: 0;
+      }
+
+      .container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .header img {
+        max-width: 120px;
+      }
+
+      h1 {
+        color: #3c3c3b;
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        color: #3c3c3b;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #3c3c3b;
+        text-align: left;
+        line-height: 1.8;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .welcome-message {
+        font-size: 32px;
+        font-weight: bold;
+        color: #f4b318;
+        background-color: #ebe8e2;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #3c3c3b;
+        font-size: 0.9em;
+        border-top: 1px solid #ebe8e2;
+        padding-top: 20px;
+      }
+
+      .footer p {
+        margin: 5px 0;
+      }
+
+      .note {
+        font-size: 14px;
+        color: #f4b318;
+        margin-top: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <div class="header">
+        <img src="{{ logo_url }}" alt="Logo" />
+      </div>
+
+      <!-- Site Name -->
+      <h1>{{ site_name }}</h1>
+
+      <!-- Title -->
+      <h2>مرحبا بك في خدمتنا!</h2>
+
+      <!-- Message -->
+      <p>مرحبًا {{ user_name }},</p>
+      <p>نحن سعداء بانضمامك إلينا. هذه الخدمة مصممة خصيصًا لتلبية احتياجاتك.</p>
+
+      <!-- Welcome Message -->
+      <div class="welcome-message">مرحبا بك في عائلتنا!</div>
+
+      <!-- Note -->
+      <p>لا تتردد في استكشاف الميزات المتاحة وطلب المساعدة في أي وقت.</p>
+      <p class="note">
+        إذا كان لديك أي استفسارات، يمكنك التواصل معنا عبر البريد الإلكتروني.
+      </p>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>جميع الحقوق محفوظة &copy; متجر القوالب الذكية 2024</p>
+      </div>
+    </div>
+  </body>
+</html>

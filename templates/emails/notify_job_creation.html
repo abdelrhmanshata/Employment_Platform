@@ -1,0 +1,78 @@
+{% extends 'emails/mail_base.html' %} {% block title %}
+<title>New Job Matching Your Skills</title>
+{% endblock %} {% block style %}
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    background-color: #4caf50;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+  }
+  .header h2 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 24px;
+  }
+  .content {
+    padding: 20px;
+    line-height: 1.6;
+    color: #333333;
+  }
+  .content p {
+    margin: 0 0 10px;
+  }
+  .content strong {
+    color: #4caf50;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #eaeaea;
+    font-size: 14px;
+    color: #777777;
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="container">
+  <div class="header">
+    <h2>Exciting Job Opportunity: {{ job.title }}</h2>
+  </div>
+
+  <div class="content">
+    <p>Hello {{ employee_name }},</p>
+    <p>
+      We are excited to inform you about a new job that aligns with your skills
+      and expertise:
+    </p>
+
+    <p><strong>Job Title:</strong> {{ job.title }}</p>
+    <p><strong>Location:</strong> {{ job.city }}</p>
+    <p><strong>Job Type(s):</strong> {{ job.job_types }}</p>
+    <p><strong>Description:</strong> {{ job.description }}</p>
+
+    <p>
+      Don't miss out on this opportunity! Click
+      <a href="{{ job_link }}">here</a> to view the job and apply directly.
+    </p>
+  </div>
+
+  <div class="footer">
+    <p>Thank you,<br /><strong>{{ company_name }} Team</strong></p>
+  </div>
+</div>
+{% endblock %}

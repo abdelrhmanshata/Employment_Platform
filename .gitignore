@@ -1,0 +1,36 @@
+# Ignore Python cache files
+*.pyc
+*.pyo
+__pycache__
+__pycache__/
+/__pycache__/
+**__pycache__**
+**__pycache__/**
+**/__pycache__/**
+
+# Ignore Media files
+media/
+*/media/
+
+# Ignore Django migration files
+migrations/
+**/migrations/**
+
+
+# Ignore the SQLite database file
+db.sqlite3
+db.sqlite3-journal
+
+
+# Ignore the env file
+env
+/env/
+venv
+/venv/
+.env
+.venv
+.vscode
+
+# Ignore the Test Folder
+tests/
+*/tests/
